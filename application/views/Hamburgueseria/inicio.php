@@ -3,6 +3,17 @@
     <div class="container-fluid">
     <h1>¡Bienvenidos a la Hamburgueseria!</h1>
     <h2>Esta el la página de <?php echo $title;?></h2>
+    <h2><?php 
+    if(isset($_COOKIE['hamburgueseria'])){
+        echo"¡Que bueno que nos visita de nuevo!";
+    }  else{
+        setcookie('hamburgueseria', time()+(120), "/");
+    }
+        /* unset($_COOKIE["asno2"]);
+        setcookie('asno', time()-(3600), "/", '.Hamburgueseria/');
+        por alguna vaina no deja de pillar el cookie. parece que o no se deja borrar o 
+        toma el cookie aunque este vencido. cookie berraco.*/
+    ?></h2>
     <br><br><br>
     <p class="datos">Para iniciar tu pedido ingresa tus datos</p>
     <br>
