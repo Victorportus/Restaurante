@@ -1,0 +1,76 @@
+.titulo{
+    font-family:fantasy;
+    color:orange;
+    font-size: 40px;
+    text-align: center;    
+}
+
+
+
+.fondo{
+    background-color: blue;
+    margin: 5em;
+}
+
+.alineado{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.checkbox{
+    background-color: lightblue;
+    border-color: black;
+    border-style: solid;
+}
+
+h1{
+    color: yellow;
+    text-align: center;
+}
+
+h2{
+    color: orange;
+    text-align: center;
+}
+
+.centrado{
+    text-align: center
+}
+
+.centrado-tabla{
+    text-align: center;
+    margin-top: 15%;
+}
+
+.foto{
+    width: 150px;
+    border-radius: 10%;
+}
+
+.completar{
+    font-family: fantasy;
+    color: navy;
+    font-size: 30px;
+    text-align: center;
+}
+
+.cocina{
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 4px;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'berlin sans fb', monospace;
+    }
+
+.datos{
+    color: yellow;
+    font-size: 24px;
+    font-family: 'berlin sans fb', monospace;    
+}
+
+.derecha{
+    text-align: right;
+}
