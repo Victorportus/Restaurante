@@ -77,10 +77,56 @@ return false;
 }else{
   return true;
 }
-
-
-
 }//required2
+
+
+//funcion para API
+/*fetch para clime de acuerdo a las coordinadas geograficas
+api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+ */
+// Geolocation
+function getWeather() {
+  var x = document.getElementById("demo");
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+function showPosition(position) {
+  var x = document.getElementById("demo");
+  var lat= position.coords.latitude;
+  var lon= position.coords.longitude;
+
+  var cityInput=document.getElementById('cityInput')
+  var ciudad=document.querySelector('.ciudad');
+  var desc=document.querySelector('.desc');
+  var hum=document.querySelector('.hum');
+  var temp=document.querySelector('.temp');
+  var tempMax=document.querySelector('.tempMax');
+  var tempMin=document.querySelector('.tempMin');
+  let url='https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid=dd218e08251bee45ac884d9ccd87878c';
+  fetch(url)
+  .then(res=>res.json())
+  .then(out=>{
+  
+  var valCiudad=out['name'];
+  var valDesc=out['weather'][0]['description'];
+  var valHum=out['main']['humidity'];
+  var valTemp=out['main']['feels_like'];
+  var valTempMax=out['main']['temp_max'];
+  var valTempMin=out['main']['temp_min'];
+  
+  ciudad.innerHTML="Ciudad: "+valCiudad;
+  desc.innerHTML="Descripción: "+valDesc;
+  hum.innerHTML="Humedad: "+valHum+"%";
+  temp.innerHTML="Temperatura: "+(valTemp-273.15).toFixed(2)+"°C";
+  tempMax.innerHTML="Temperatura máxima: "+(valTempMax-273.15).toFixed(2)+"°C";
+  tempMin.innerHTML="Temperatura mínima: "+(valTempMin-273.15).toFixed(2)+"°C";
+  })
+  .catch(err=>alert("Error! La búsqueda no se ha llevado a cabo. Error: "+err));
+
+}
 
 
 
