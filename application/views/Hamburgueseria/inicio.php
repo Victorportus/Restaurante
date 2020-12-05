@@ -10,7 +10,7 @@
         setcookie('hamburgueseria', time()+(120), "/");
     }
         /* unset($_COOKIE["asno2"]);
-        setcookie('asno', time()-(3600), "/", '.Hamburgueseria/');
+        setcookie('hamburgueseria', time()-(3600), "/", '.Hamburgueseria/');
         por alguna vaina no deja de pillar el cookie. parece que o no se deja borrar o 
         toma el cookie aunque este vencido. cookie berraco.*/
     ?></h2>
@@ -33,3 +33,21 @@
 </div>
 <!--Termian el cuerpo de la página-->
 
+<!-- este es el contador de visitas -->
+<div class="container-fluid cocina my-4">
+    <?php
+    $file=fopen("visitas.txt","w");
+    //session_start();
+    //$_SESSION['v']=$_SESSION['v']+1;
+    //Lo anterior tiene que estar comantado/desactivado para que cuente parejo
+    $count=$_SESSION['v'];
+    fwrite($file, $count);
+    ?>
+    <p>Esta página se ha cargado <?php
+        $fi=file_get_contents("visitas.txt");
+        echo $fi;
+    ?> veces</p>
+    </div>
+    <!-- Para regresar el contador a 0, hay que cambiar $_SESSION['v']+1 por 0, cargar la página, y luego regresar
+    todo a como estaba-->
+<!-- Termina el contador de visitas -->
