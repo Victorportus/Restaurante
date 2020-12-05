@@ -56,11 +56,6 @@
 </div>
 <!--Termina espacio para API-->
 
-<!--Espacio para contador de visitantes-->
-<div class="container-fluid cocina my-4">
-<p>aqui puede ir el contador</p>
-</div>
-<!--Termina espacio para contador-->
 
 </body>
 </html>
