@@ -34,8 +34,9 @@ class Hamburgueseria extends CI_Controller {
             $this->template->load('basic_template','Hamburgueseria/'.$pagina, $data);               
             
 
-            /*$this->load->view('Hamburgueseria/'.$pagina, $data);*/
         }
-    }    
+    }   
+    
+
 }
 ?>

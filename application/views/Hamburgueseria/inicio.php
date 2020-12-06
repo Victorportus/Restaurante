@@ -3,18 +3,22 @@
     <div class="container-fluid">
     <h1>¡Bienvenidos a la Hamburgueseria!</h1>
     <h2>Esta el la página de <?php echo $title;?></h2>
-    <!--<h2>
+    <h2>
     <?php 
-    /*if(isset($_COOKIE['hamburgueseria'])){
-        echo"¡Que bueno que nos visita de nuevo!";
-    }  else{
-        setcookie('hamburgueseria', time()+(120), "/");
+    if ( isset( $_COOKIE[ 'visitas' ] ) ) {
+
+        setcookie( 'visitas', $_COOKIE[ 'visitas' ] + 1, time() + 3600 * 24 );
+        $mensaje = 'Numero de visitas: '.$_COOKIE[ 'visitas' ];
+        echo '<script language="javascript">alert("';
+        echo $mensaje;
+        echo '");</script>';
     }
-        /* unset($_COOKIE["asno2"]);
-        setcookie('hamburgueseria', time()-(3600), "/", '.Hamburgueseria/');
-        por alguna vaina no deja de pillar el cookie. parece que o no se deja borrar o 
-        toma el cookie aunque este vencido. cookie berraco.*/
-    ?></h2>-->
+    else {
+    
+        setcookie( 'visitas', 1, time() + 3600 * 24 );
+        $mensaje = 'Bienvenido por primera vez a nuesta web';
+    }
+    ?></h2>
     <br><br><br>
     <p class="datos">Para iniciar tu pedido ingresa tus datos</p>
     <br>
@@ -31,7 +35,16 @@
             <input type="submit" id="save" name="save" class="btn btn-warning" onclick="return required()" role="button" value="Siguiente" />
         </form>
     </div>
+
+    <!--contador de visitas por pagina web-->
+    <!--<div>    
+    <div id="sfcpyq4f5tbry1fxnr4tdhqjre2pbgzgxzn"></div><script type="text/javascript" src="https://counter8.stat.ovh/private/counter.js?c=pyq4f5tbry1fxnr4tdhqjre2pbgzgxzn&down=async" async></script><noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas para blogger"><img src="https://counter8.stat.ovh/private/contadorvisitasgratis.php?c=pyq4f5tbry1fxnr4tdhqjre2pbgzgxzn" border="0" title="contador de visitas para blogger" alt="contador de visitas para blogger"></a></noscript>
+    </div>-->
+
+
 </div>
+
+
 <!--Termian el cuerpo de la página-->
 
 <!-- este es el contador de visitas -->

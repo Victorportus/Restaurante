@@ -26,8 +26,10 @@ class mesas extends CI_Model {
     
     function deletepedido($idPedido){
         $query = $this->db->query('delete from pedidos where idpedidos =' .$idPedido);
-        
+       
     }
+
+    
 }
 
 ?>
