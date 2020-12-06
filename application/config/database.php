@@ -73,10 +73,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
+	'hostname' => 'mysql-16392-0.cloudclusters.net',
+	'username' => 'Victor Portus',
 	'password' => 'Hamburgueseria*',
 	'database' => 'hamburgueseria',
 	'dbdriver' => 'mysqli',
@@ -92,5 +93,6 @@ $db['default'] = array(
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
-	'save_queries' => TRUE
+	'save_queries' => TRUE,
+	'port' => '16392'
 );
