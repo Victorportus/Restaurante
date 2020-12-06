@@ -37,9 +37,9 @@
     </div>
 
     <!--contador de visitas por pagina web-->
-    <!--<div>    
+    <div>    
     <div id="sfcpyq4f5tbry1fxnr4tdhqjre2pbgzgxzn"></div><script type="text/javascript" src="https://counter8.stat.ovh/private/counter.js?c=pyq4f5tbry1fxnr4tdhqjre2pbgzgxzn&down=async" async></script><noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas para blogger"><img src="https://counter8.stat.ovh/private/contadorvisitasgratis.php?c=pyq4f5tbry1fxnr4tdhqjre2pbgzgxzn" border="0" title="contador de visitas para blogger" alt="contador de visitas para blogger"></a></noscript>
-    </div>-->
+    </div>
 
 
 </div>
