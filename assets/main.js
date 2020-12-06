@@ -86,7 +86,6 @@ api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
  */
 // Geolocation
 function getWeather() {
-  var x = document.getElementById("demo");
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else { 
@@ -94,11 +93,9 @@ function getWeather() {
   }
 }
 function showPosition(position) {
-  var x = document.getElementById("demo");
   var lat= position.coords.latitude;
   var lon= position.coords.longitude;
 
-  var cityInput=document.getElementById('cityInput')
   var ciudad=document.querySelector('.ciudad');
   var desc=document.querySelector('.desc');
   var hum=document.querySelector('.hum');
@@ -125,7 +122,6 @@ function showPosition(position) {
   tempMin.innerHTML="Temperatura mínima: "+(valTempMin-273.15).toFixed(2)+"°C";
   })
   .catch(err=>alert("Error! La búsqueda no se ha llevado a cabo. Error: "+err));
-
 }
 
 

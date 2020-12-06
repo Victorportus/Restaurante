@@ -7,12 +7,8 @@
     if(isset($_COOKIE['hamburgueseria'])){
         echo"¡Que bueno que nos visita de nuevo!";
     }  else{
-        setcookie('hamburgueseria', time()+(120), "/");
+        setcookie('hamburgueseria', time()+(3600*2), "/");
     }
-        /* unset($_COOKIE["asno2"]);
-        setcookie('hamburgueseria', time()-(3600), "/", '.Hamburgueseria/');
-        por alguna vaina no deja de pillar el cookie. parece que o no se deja borrar o 
-        toma el cookie aunque este vencido. cookie berraco.*/
     ?></h2>
     <br><br><br>
     <p class="datos">Para iniciar tu pedido ingresa tus datos</p>
