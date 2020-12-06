@@ -36,7 +36,7 @@
   <button type="button" class="btn btn-primary col-md-3 mx-3" onclick="getWeather()">Descubra el clima en su ciudad</button> 
   <div class="col-md-6 "></div>
   <div class="col-md-2 ">
-  <a href="https://openweathermap.org/api" target="_blank"><img src="<?php echo base_url(); ?>assets/logo_open_weather.png" alt="open_weather_logo" class="rounded pull-right"></a>
+  <a href="https://openweathermap.org/api" target="_blank"><img src="<?php echo base_url(); ?>assets/logo.png" alt="open_weather_logo" class="rounded pull-right"></a>
   </div>
 </div>
 

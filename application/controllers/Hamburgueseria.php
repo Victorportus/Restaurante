@@ -9,6 +9,7 @@ class Hamburgueseria extends CI_Controller {
 	{
         echo "Hamburgueseria";
     }
+    
     public function view($pagina = 'inicio')
     {
         /*echo "Ensayo";*/
@@ -19,11 +20,14 @@ class Hamburgueseria extends CI_Controller {
         }
         else
         {
-            $this->load->model('mesas');
+            $this->load->model('mesas');            
             $datosMesas = $this->mesas->cargamesas();
+            $this->load->model('cocina');
+            $datosCocina = $this->cocina->cargarcocina();
 
             $data['title'] = ucfirst($pagina);
             $data['datosmesas'] = $datosMesas;
+            $data['datoscocina'] = $datosCocina;
 
             $this->load->helper('url');
             $this->load->library('template');

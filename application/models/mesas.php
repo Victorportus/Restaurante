@@ -22,7 +22,12 @@ class mesas extends CI_Model {
         $this->db->query($query);
         $id =  $this->db->insert_id();
         return $id;
-	}
+    }
+    
+    function deletepedido($idPedido){
+        $query = $this->db->query('delete from pedidos where idpedidos =' .$idPedido);
+        
+    }
 }
 
 ?>
