@@ -9,6 +9,7 @@
 
         setcookie( 'visitas', $_COOKIE[ 'visitas' ] + 1, time() + 3600 * 24 );
         $mensaje = 'Numero de visitas: '.$_COOKIE[ 'visitas' ];
+        echo "¡Que bueno que nos visitas de nuevo!";
         echo '<script language="javascript">alert("';
         echo $mensaje;
         echo '");</script>';
